@@ -48,6 +48,16 @@ trait RequestRowSerializer extends Serializable {
     * The SageMaker transformation content-type
     */
   val contentType : String
+  
+  /**
+   * Bytes to be written at the start of the Request Body
+   */
+  val start: String
+
+  /**
+   * Bytes to be written at the end of the Request Body
+   */
+  val end: String
 
   /**
     * Validates that [[Row]]s with the specified schema can be serialized by this
